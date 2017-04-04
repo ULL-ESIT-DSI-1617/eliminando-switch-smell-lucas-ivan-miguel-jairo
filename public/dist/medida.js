@@ -1,6 +1,9 @@
 "use strict"
 
-var XRegExp = require('xregexp');
+//var XRegExp = require('xregexp');
+
+
+
 var unidad_medida = XRegExp('^(\\s*) \n' +
                 '(?<valor> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) \n' +
                 '(\\s*)                                             \n' +
@@ -13,10 +16,11 @@ var unidad_medida = XRegExp('^(\\s*) \n' +
 //let measures={"f": "Farenheit","F":"Fahrenheit","c":"Celsius"}
 // console.log(measures["f"]+"fff");
 
+var match = XRegExp.exec('32f ',unidad_medida);
+console.log(match.valor+"fdddff");
 
- var match = XRegExp.exec('32f ',unidad_medida);
- console.log(match.valor+"fdddff");
-class Medida{
+ 
+export class Medida{
 
     constructor(dato){
         var match = dato.match(unidad_medida);

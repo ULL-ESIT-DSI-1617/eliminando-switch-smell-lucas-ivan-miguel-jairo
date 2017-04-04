@@ -1,5 +1,7 @@
 "use strict"
 
+import * as Medida from "medida";
+
 class Temperatura extends Medida{
 
         constructor(dato){
@@ -78,3 +80,6 @@ const calculate = () => {
     }
 
   }
+  
+  
+module.exports = Temperatura;

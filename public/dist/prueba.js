@@ -14,14 +14,22 @@ var unidad_medida = XRegExp('^(\\s*) \n' +
 // console.log(measures["f"]+"fff");
 
 
- var match = XRegExp.exec('32c ',unidad_medida);
- console.log(match.valor+" "+match.tipo);
+
 class Medida{
 
     constructor(dato){
+         var uno = XRegExp.exec(dato,unidad_medida);
+    console.log(dato+"estoy dentor de medida")
+    //console.log(match.valor+" "+ match.tipo+match.to);
+     // console.log(match);
+      
+     //var aki = match.valor+" "+ match.tipo
         //var match = dato.match(unidad_medida);
-        var num = match.valor,
-        type = match.tipo,
+        
+        
+        
+        var num = uno.valor;
+        var type = uno.tipo;
 
 
          num = parseFloat(num);
@@ -59,28 +67,41 @@ class Medida{
      //var measures = measures;
         const measures={"f": "Farenheit","F":"Fahrenheit","c":"Celsius"}
       //var match = valor.match(unidad_medida);
+      
+      console.log("valuee" +valor)
       var match = XRegExp.exec(valor,unidad_medida);
       if (match) {
     var numero = match.valor,
         tipo   = match.tipo,
         destino = match.to;
-        console.log(measures[tipo]);
+     
+    try {
+           console.log(measures[tipo]+"esta mierda");
        // console.log(measures[destino]);
          //source = new measures[tipo](numero);
          var t = measures[tipo];
-         var e = (eval('new'+" "+t+'(numero)'));
-        console.log('claseee:'+e.constructor.name)
+         console.log("Dasasasasasasasasasasasasasasasasas " + t )
+         
+        var paso = numero+tipo; 
+         
+         var e = (eval('new'+" "+t+'(paso)'));
+         
+         
+          console.log('claseee:'+e.constructor.name)
           console.log('cosas:'+e.valor+" "+e.tipo)
-          //console.log('conver:'+e.toKelvin())
+         console.log('conver:'+e.toKelvin())
           var j = measures[destino];
           console.log('j: '+j)
+        
           var aque = (eval('e.to'+j+'()'));
-          console.log('conversion: '+aque)
-    try {
-      var source = new measures[tipo](numero); // new Fahrenheit(32)
-      var target = "to"+measures[destino]; // "toCelsius"
+          console.log('conversion: '+ aque)
+        
+      
+    //  var source = new measures[tipo](numero); // new Fahrenheit(32)
+     // var target = "to"+measures[destino]; // "toCelsius"
      // return source[target]().toFixed(2) + " "+target; // "0 Celsius"
-     return source[target]();
+     //return source[target]();
+     return aque
     }
     catch(err) {
       return 'Desconozco como convertir desde "'+tipo+'" hasta "'+destino+'"';
@@ -115,66 +136,10 @@ class Temperatura extends Medida{
 
 
 
-
-const calculate = () => {
-
-    var result;
-    var temp = original.value;
-    var regexp = /([-+]?\d+(?:\.\d*)?)\s*((k|m|c)?m(3)?|[CcKFfk])/;
-    var m = temp.match(regexp);
-    var Cel;
-
-   if (m == null){
-      converted.innerHTML = "Unidad de temperatura incorrecta. Inserte C, K o F.";
-    }
-    else if (m[2]==="mm" || m[2]==="mm" ){
-      Cel = new Kilometros(temp);
-      var c = Cel.to_mm()
-
-      converted.innerHTML = c.valor + c.tipo + "\n lolo";
-    }
-     else if (m[2]==="km" || m[2]==="km" ){
-      Cel = new Milimetros(temp);
-      var c = Cel.toKelvinm()
-
-      converted.innerHTML = c.valor + c.tipo + "\n hola" ;
-    }
-    else if (m[2]==="m" || m[2]==="m" ){
-      Cel = new Metros(temp);
-      var c = Cel.to_mm()
-
-      converted.innerHTML = c.valor + c.tipo + "\n lolo";
-    }
-    else if (m[2]==="cm" || m[2]==="cm" ){
-      Cel = new Centimetros(temp);
-      var c = Cel.toKelvinm()
-
-      converted.innerHTML = c.valor + c.tipo + "\n hola" ;
-    }
-
-    else if (m[2]==="c" || m[2]==="C" ){
-      Cel = new Celsius(temp);
-      var k = Cel.toKelvin()
-      var f = Cel.toFarenheit()
-      converted.innerHTML = k.valor + k.tipo + "\n" + f.valor + f.tipo;
-    }
-    else if (m[2]==="k" || m[2]==="K" ){
-      Cel = new Kelvin(temp);
-      var c = Cel.toCelsius()
-      var f = Cel.toFarenheit()
-      converted.innerHTML = c.valor + c.tipo + "\n" + f.valor + f.tipo;
-    }
-    else if (m[2]==="f" || m[2]==="F" ){
-      Cel = new Farenheit(temp);
-      var c = Cel.toCelsius()
-      var k = Cel.toKelvin()
-      converted.innerHTML = c.valor + c.tipo + "\n" + k.valor + k.tipo;
-    }
-
-  }
   class Celsius extends Temperatura{
 
           constructor(dato){
+              
               super(dato)
           }
 
@@ -194,13 +159,14 @@ const calculate = () => {
            }
 
            toFarenheit(){
+               console.log("ahora siiii")
 
               var result;
               result = (this.valor * 1.8) + 32;
               result = result.toFixed(1) +"f";
 
-              //var n = new Farenheit(result);
-
+              var n = new Farenheit(result);
+               //return n;
               return result;
            }
       }
@@ -269,8 +235,31 @@ const calculate = () => {
 
 
 
+function calculate(){
+
+    var result;
+    var temp = original.value;
+    var regexp = /([-+]?\d+(?:\.\d*)?)\s*((k|m|c)?m(3)?|[CcKFfk])/;
+    var m = temp.match(regexp);
+    var Cel;
+    
+    var match = XRegExp.exec(temp,unidad_medida);
+    
+    console.log(match.valor+" "+ match.tipo+match.to);
+      console.log(match);
+      
+     var aki = match.valor+" "+ match.tipo
+  console.log(temp+"uffffffffff");
+     var p = new Medida(temp);
+      
+      var e = p.convertir(temp);
+     // console.log(e)
+    
+  converted.innerHTML =  e;
 
 
-      var p = new Medida("32c");
-      var e = p.convertir("32cf");
-      console.log(e.class)
+  }
+
+
+
+     

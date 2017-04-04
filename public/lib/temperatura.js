@@ -115,7 +115,7 @@ class Celsius extends Temperatura{
     }
 
 
-const calculate = () => {
+function calculate(){
 console.log("estoy en calulate");
     var result;
     var temp = original.value;
