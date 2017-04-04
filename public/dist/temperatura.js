@@ -20,7 +20,7 @@ class Temperatura extends Medida{
 
 
 
- 
+
 
 const calculate = () => {
 
@@ -36,25 +36,25 @@ const calculate = () => {
     else if (m[2]==="mm" || m[2]==="mm" ){
       Cel = new Kilometros(temp);
       var c = Cel.to_mm()
-      
+
       converted.innerHTML = c.valor + c.tipo + "\n lolo";
     }
      else if (m[2]==="km" || m[2]==="km" ){
       Cel = new Milimetros(temp);
       var c = Cel.to_km()
-      
+
       converted.innerHTML = c.valor + c.tipo + "\n hola" ;
     }
     else if (m[2]==="m" || m[2]==="m" ){
       Cel = new Metros(temp);
       var c = Cel.to_mm()
-      
+
       converted.innerHTML = c.valor + c.tipo + "\n lolo";
     }
     else if (m[2]==="cm" || m[2]==="cm" ){
       Cel = new Centimetros(temp);
       var c = Cel.to_km()
-      
+
       converted.innerHTML = c.valor + c.tipo + "\n hola" ;
     }
 
@@ -78,10 +78,3 @@ const calculate = () => {
     }
 
   }
-  
-  
-
-
-
-
-

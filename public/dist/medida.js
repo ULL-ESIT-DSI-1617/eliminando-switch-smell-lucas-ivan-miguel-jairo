@@ -22,8 +22,8 @@ class Medida{
         var match = dato.match(unidad_medida);
         var num = match.valor,
         type = match.tipo,
-       
-        
+
+
          num = parseFloat(num);
          this.num_ = num;
          this.type_ = type;
@@ -50,12 +50,14 @@ class Medida{
     set tipo(value){
         this.type=value;
     }
-    
+
+
+
 
     //se  le pasa valor y el tipo al que cambia
     convertir(valor){
      //var measures = measures;
-        const measures={"f": "Farenheit()","F":"Fahrenheit()","c":"Celsius()"}
+        const measures={"f": "Farenheit()","F":"Fahrenheit()","c":"Celsius"}
       //var match = valor.match(unidad_medida);
       var match = XRegExp.exec(valor,unidad_medida);
       if (match) {
@@ -65,9 +67,9 @@ class Medida{
         console.log(measures[tipo]);
        // console.log(measures[destino]);
          //source = new measures[tipo](numero);
-         //var t = measures[tipo]();
-         var e = new measures[tipo];
-        console.log(e)
+         var t = measures[tipo];
+         var e = (eval('new'+" "+t+'(numero)'));
+
     try {
       var source = new measures[tipo](numero); // new Fahrenheit(32)
       var target = "to"+measures[destino]; // "toCelsius"
