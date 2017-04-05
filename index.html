@@ -6,9 +6,15 @@
      <!--link href="assets/css/normalize.css" rel="stylesheet" type="text/css"-->
      <link href="assets/css/global.css" rel="stylesheet" type="text/css">
      <script src="./public/dist/xregexp.js"></script>
+    
+    
     <script type="text/javascript" src="./public/dist/prueba.js"></script>
-    <script src="./public/dist/main.js"></script>
+        <script type="text/javascript" src="./public/dist/temperatura.js"></script>
+        <script type="text/javascript" src="./public/dist/kelvin.js"></script>
+            <script type="text/javascript" src="./public/dist/farenheit.js"></script>
+                    <script type="text/javascript" src="./public/dist/celsius.js"></script>
 
+<script src="./public/dist/main.js"></script>
       <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="materialize.min.css">
 
@@ -23,32 +29,7 @@
         <link href="login-box.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-      <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#" class="brand-logo right">
-                        <%- message %>
-                    </a>
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
-                         <li><a href="/inicio">Inicio</a></li>
-                        </li>
-                        <li><a href="/registro">Registrarse</a>
-                        </li>
-                        <li><a href="/loguearse">Login</a>
-                        </li>
-                        <li><a href="/actualiza">Actualizar Contraseña</a>
-                        </li>
-                        <li><a href="/libro">Libro</a>
-                        </li>
-                        <li>
-                         <a href="/conversor"> Ir al Comversor </a>
-                        </li>
-                        <li><a href="/logout">Cerrar Sesion</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+     
         <br />
         <br />
         <div class="container-fluid">
@@ -61,7 +42,7 @@
     <table>
       <tr>
         <th>Enter  Temperature (examples: 32F, 45C, -2.5f):</th>
-        <td><input id="original" autofocus onchange="main();" placeholder="32F" size="50"></td>
+        <td><input id="original" autofocus onchange="calculate();" placeholder="32F" size="50"></td>
       </tr>
       <tr>
         <th>Converted Temperature:</th>

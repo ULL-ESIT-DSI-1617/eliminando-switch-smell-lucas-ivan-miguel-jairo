@@ -1,31 +1,28 @@
-"use strict"
+class Kelvin extends Temperatura{
 
- class Kelvin extends Temperatura{
+                 constructor(dato){
+                     super(dato)
+                 }
 
-        constructor(dato){
-            super(dato)
-        }
+                 toCelsius(){
 
-        toCelsius(){
+                     var result;
+                     result = (this.valor - 273);
+                     result = result.toFixed(1) +"c";
 
-            var result;
-            result = (this.valor - 273);
-            result = result.toFixed(1) +"c";
+                     var n = new Celsius(result);
 
-            var n = new Celsius(result);
+                     return n;
+                 }
 
-            return n;
-        }
+                 toFarenheit(){
 
-        toFarenheit(){
+                     var result;
+                     result = 1.8*(this.valor - 273)+ 32;
+                     result = result.toFixed(1) + "f";
 
-            var result;
-            result = 1.8*(this.valor - 273)+ 32;
-            result = result.toFixed(1) + "f";
+                     var n = new Farenheit(result);
 
-            var n = new Farenheit(result);
-
-            return n;
-        }
-    }
-module.exports = Farenheit;
+                     return n;
+                 }
+             }

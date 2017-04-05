@@ -1,36 +1,37 @@
 "use strict"
-
 class Celsius extends Temperatura{
 
-        constructor(dato){
-            super(dato)
-        }
+          constructor(dato){
+              
+              super(dato)
+          }
 
 
-        toKelvin(){
+          toKelvin(){
 
-            var result;
-            result = (this.valor + 273);
-            result = result.toFixed(1) +"k";
+              var result;
+              result = (this.valor + 273);
+              result = result.toFixed(1) +"k";
 
-            var n = new Kelvin(result);
-
-
+              var n = new Kelvin(result);
 
 
-            return n;
-         }
-
-         toFarenheit(){
-
-            var result;
-            result = (this.valor * 1.8) + 32;
-            result = result.toFixed(1) +"f";
-
-            var n = new Farenheit(result);
 
             return n;
-         }
-    }
+              //return result;
+           }
 
-module.exports = Celsius;
+           toFarenheit(){
+               console.log("ahora siiii")
+
+              var result;
+              result = (this.valor * 1.8) + 32;
+              result = result.toFixed(1) +"f";
+
+              var n = new Farenheit(result);
+              return n;
+             //return result;
+           }
+      }
+
+     
