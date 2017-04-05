@@ -20,12 +20,7 @@
   },
   "homepage": "https://github.com/ULL-ESIT-DSI-1617/programacion-orientada-a-objetos-y-herencia-en-javascript-lucas-ivan-miguel-jairo#readme",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.17.1",
-    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.6",
-    "express": "^4.15.2",
-    "express-session": "^1.15.1",
-    "xregexp": "^3.1.1"
+    "express": "^4.15.2"
   }
 }
