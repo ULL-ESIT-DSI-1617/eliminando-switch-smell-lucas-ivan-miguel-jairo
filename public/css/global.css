@@ -3,9 +3,11 @@ th, td      {
                text-align: right;
                font-size:large;
             }  
-#converted  { color: red; font-weight: bold; font-size:large;          }     /* Calculated values in bold */
+#converted  { color: red; font-weight: bold; font-size:large;          }
+#resultado  { margin-left: 15%; padding-top: 5%;}   
+/* Calculated values in bold */
 input       {
-              text-align: right;       /* Align input to the right  */
+              text-align: center;       /* Align input to the right  */
               border: none;
               border-radius: 20px 20px 20px 20px;
               padding: 5px  5px;
@@ -24,4 +26,5 @@ h1 {
     color: white;
     display:inline-block;
     border-radius: 10px 10px 10px 10px;
+    
 }
