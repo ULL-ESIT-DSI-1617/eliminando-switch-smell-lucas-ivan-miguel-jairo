@@ -1,12 +1,6 @@
 "use strict"
 
 
-import * as Temperatura from "temperatura";
-import * as Celsius from "celsius";
-import * as Kelvin from "Kelvin";
-
-
-
 class Farenheit extends Temperatura{
 
 

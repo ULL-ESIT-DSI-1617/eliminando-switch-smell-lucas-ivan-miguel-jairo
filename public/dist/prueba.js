@@ -36,10 +36,15 @@ class Medida{
          this.num_ = num;
          this.type_ = type;
     }
+    
     to_s(){
-        var a = this.num_.toFixed(1) + this.type_.toFixed(2);
-        console.log(a)
-        return a;
+       
+        
+        var a = this.num_+" "+ this.type_
+        
+        console.log("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+ a)
+        return a
+       
     }
     //Geter
     get valor(){
@@ -65,7 +70,7 @@ class Medida{
     //se  le pasa valor y el tipo al que cambia
     convertir(valor){
      //var measures = measures;
-        const measures={"f": "Farenheit","F":"Fahrenheit","c":"Celsius"}
+        const measures={"f": "Farenheit","F":"Fahrenheit","c":"Celsius","C":"Celsius","k": "Kelvin","K":"Kelvin"}
       //var match = valor.match(unidad_medida);
       
       console.log("valuee" +valor)
@@ -89,7 +94,7 @@ class Medida{
          
           console.log('claseee:'+e.constructor.name)
           console.log('cosas:'+e.valor+" "+e.tipo)
-         console.log('conver:'+e.toKelvin())
+        // console.log('conver:'+e.toKelvin())
           var j = measures[destino];
           console.log('j: '+j)
         
@@ -150,12 +155,12 @@ class Temperatura extends Medida{
               result = (this.valor + 273);
               result = result.toFixed(1) +"k";
 
-              //var n = new Kelvin(result);
+              var n = new Kelvin(result);
 
 
 
-
-              return result;
+            return n;
+              //return result;
            }
 
            toFarenheit(){
@@ -166,8 +171,8 @@ class Temperatura extends Medida{
               result = result.toFixed(1) +"f";
 
               var n = new Farenheit(result);
-               //return n;
-              return result;
+              return n;
+             //return result;
            }
       }
 
@@ -204,7 +209,7 @@ class Temperatura extends Medida{
               }
           }
 
-          class Kelvin extends Temperatura{
+class Kelvin extends Temperatura{
 
                  constructor(dato){
                      super(dato)
@@ -234,7 +239,7 @@ class Temperatura extends Medida{
              }
 
 
-
+/*
 function calculate(){
 
     var result;
@@ -254,12 +259,14 @@ function calculate(){
       
       var e = p.convertir(temp);
      // console.log(e)
-    
-  converted.innerHTML =  e;
+     
+ // var c= e.otro()
+   // console.log("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa111111111111"+c)
+        converted.innerHTML =  e.to_s();
 
 
   }
 
 
-
+*/
      
