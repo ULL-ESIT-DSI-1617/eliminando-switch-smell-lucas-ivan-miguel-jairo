@@ -1,5 +1,7 @@
 "use strict"
 
+
+
  class Kelvin extends Temperatura{
 
         constructor(dato){
@@ -28,4 +30,4 @@
             return n;
         }
     }
-module.exports = Farenheit;
+//module.exports = Farenheit;

@@ -33,4 +33,4 @@ class Farenheit extends Temperatura{
         }
     }
     
-module.exports = Farenheit;
+//module.exports = Farenheit;

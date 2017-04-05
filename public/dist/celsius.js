@@ -1,5 +1,7 @@
 "use strict"
 
+
+
 class Celsius extends Temperatura{
 
         constructor(dato){
@@ -33,4 +35,4 @@ class Celsius extends Temperatura{
          }
     }
 
-module.exports = Celsius;
+//module.exports = Celsius;

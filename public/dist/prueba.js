@@ -1,6 +1,6 @@
 "use strict"
 
-
+    
 var unidad_medida = XRegExp('^(\\s*) \n' +
                 '(?<valor> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) \n' +
                 '(\\s*)                                             \n' +
@@ -15,7 +15,12 @@ var unidad_medida = XRegExp('^(\\s*) \n' +
 
 
 
-class Medida{
+(function(exportar) { // triangle.js
+  
+   "use strict"
+  
+
+exportar.Medida = class Medida{
 
     constructor(dato){
          var uno = XRegExp.exec(dato,unidad_medida);
@@ -85,12 +90,12 @@ class Medida{
        // console.log(measures[destino]);
          //source = new measures[tipo](numero);
          var t = measures[tipo];
-         console.log("Dasasasasasasasasasasasasasasasasas " + t )
+        
          
         var paso = numero+tipo; 
          
-         var e = (eval('new'+" "+t+'(paso)'));
-         
+         var e = (eval('new'+" exportar."+ t+'(paso)'));
+        //  console.log("Dasasasasasasasasasasasasasasasasas " + t )
          
           console.log('claseee:'+e.constructor.name)
           console.log('cosas:'+e.valor+" "+e.tipo)
@@ -119,8 +124,18 @@ class Medida{
 
 
 }
+ //module.exports = Medida;
 
-class Temperatura extends Medida{
+}(window.exportar = window.exportar || {}));
+
+
+
+
+( function(exportar) { // triangle.js
+ "use strict"
+//var Medida = new Medida("15c");
+ 
+ exportar.Temperatura = class Temperatura extends  exportar.Medida{
 
         constructor(dato){
               super(dato)
@@ -136,12 +151,15 @@ class Temperatura extends Medida{
 
 }
 
+}(window.exportar = window.exportar || {}));
 
 
 
+(function(exportar) { // triangle.js
 
 
-  class Celsius extends Temperatura{
+
+ exportar.Celsius =  class Celsius extends exportar.Temperatura{
 
           constructor(dato){
               
@@ -164,20 +182,31 @@ class Temperatura extends Medida{
            }
 
            toFarenheit(){
-               console.log("ahora siiii")
+             
 
               var result;
               result = (this.valor * 1.8) + 32;
               result = result.toFixed(1) +"f";
-
-              var n = new Farenheit(result);
+ console.log("ahora")
+              var n = new exportar.Farenheit(result);
+                console.log("ahora siiii")
               return n;
              //return result;
            }
       }
 
-      "use strict"
-      class Farenheit extends Temperatura{
+    
+}(window.exportar = window.exportar || {}));
+
+
+
+
+
+    (function(exportar) { // triangle.js
+
+
+
+ exportar.Farenheit  =   class Farenheit extends exportar.Temperatura{
 
 
               constructor(dato){
@@ -208,6 +237,8 @@ class Temperatura extends Medida{
                   return n;
               }
           }
+          
+}(window.exportar = window.exportar || {}));
 
 class Kelvin extends Temperatura{
 
@@ -267,6 +298,77 @@ function calculate(){
 
   }
 
-
 */
+
+
+
+
+(function(shapes) { // triangle.js
+
+
+  var Triangle = shapes.Triangle = function(options) {
+    this.width = options.width;
+    this.height = options.height;
+  };
+  Triangle.prototype.getArea = function() {
+    return 0.5 * this.width * this.height;
+  };  
+}(window.shapes = window.shapes || {}));
+
+
+
+(function(shapes) { // triangle.js
+  
+   "use strict"
+   
+     shapes.temp = class temperature{
+   
+         constructor(dato){
+                  this.d= dato
+                 }
+                 to_s(){
+                     
+                     return  this.d;
+                 }
+        
+        
+    }
+    
+ //shapes(new chuchu)
+
+ //var chus = shapes.chuchu = function(options) { }
+   // var temp =shapes = new Temperatura("52c");
+
+
+//var Tri =  new chuchu(shapes);
+  
+   //  var nuevo =shapes.(new chuchu("sadsa"));
+    
+    //shapes.nuevo;   
+    
+    
+    console.log("Mierd")  
      
+  //  shapes.nuevo;
+     
+  // return nuevo;
+    
+     
+
+}(window.shapes = window.shapes || {}));
+
+
+
+/*
+function getArea(shape, options) {
+  var area = 0;
+
+  switch (shape) {
+    case 'Triangle': // 5: Magic String
+      area = .5 * options.width * options.height;
+      break;
+
+  }
+
+  return area;
+}*/

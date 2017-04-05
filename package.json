@@ -7,6 +7,7 @@
     "build": "babel --presets es2015 public/assets/js -d public/dist "
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
     "gitbook-cli": "^2.3.0"
   },
   "repository": {

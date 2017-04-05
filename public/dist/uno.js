@@ -57,10 +57,10 @@ function getArea(shape, options) {
 
 
 
-function calculate(){
+function calculate_(){
     
    // var dato = getArea('Triangle', { width: original.value , height: 100 }); // 14: Magic String
-    var dato = getArea(shapeType.triangle, { width: original.value, height: 100 });
+     var dato = getArea(shapeType.triangle, { width: original.value, height: 100 });
      converted.innerHTML =  dato;
     
 }

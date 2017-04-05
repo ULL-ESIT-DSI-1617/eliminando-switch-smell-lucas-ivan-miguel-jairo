@@ -14,6 +14,22 @@
 
  "use strict";
 
+(function(shapes) {
+  var Circle = shapes.Circle = function(options) {
+    this.radius = options.radius;
+  };
+
+  Circle.prototype.getArea = function() {
+    return Math.PI * Math.pow(this.radius, 2);
+  };
+
+  Circle.prototype.getCircumference = function() {
+    return 2 * Math.PI * this.radius;
+  };
+}(window.shapes = window.shapes || {}));
+
+/*
+
 function calculate(){
 
     var result;
@@ -39,7 +55,94 @@ function calculate(){
         converted.innerHTML =  e.to_s();
 
 
-  }
-
-
+}
+*/
      
+var shapeType = {
+   triangle: 'Triangle', 
+   temp: 'temperature',// 2: Object Type
+   Medida: 'Medida',// 2: Object Type
+   c: 'exportar.Celsius'
+};
+
+function getArea(shape, options) {
+  var area = 0;
+  switch (shape) {
+    case shapeType.triangle: // 8: Object Type
+      area = .5 * options.width * options.height;
+      break;
+  }
+  
+  
+ 
+  
+  
+  return area;
+}
+
+
+function my(shape, options) {
+   
+     
+     
+       var area = 0;
+  switch (shape) {
+    case shapeType.temp: // 8: Object Type
+      area = options.dato   ;
+      break;
+  }
+  
+  
+  return area;
+    
+}
+
+function myp(shape, options) {
+   
+     
+     
+       var area = 0;
+  switch (shape) {
+    case shapeType.temp: // 8: Object Type
+      area = options.dato   ;
+      break;
+  }
+  
+  
+  return area;
+    
+}
+
+function convertir(shape, options){
+    console.log(shape);
+  // return shape.convertir(options.dato)
+   
+       
+     var e = (eval('new'+" "+shape+'(options.dato)'));
+     
+     var sol = e.convertir(options.dato);
+     
+    return sol
+    
+}
+
+function calculate(){
+    
+   // var dato = getArea('Triangle', { width: original.value , height: 100 }); // 14: Magic String
+     var dato = getArea(shapeType.triangle, { width: original.value, height: 100 });
+     
+     
+     
+     var b = my(shapeType.temp, { dato: "holaaaa chuchu" });
+     
+     
+      var a = convertir(shapeType.c, { dato:  original.value });
+     
+     console.log(a);
+     converted.innerHTML =  a.to_s();
+     
+     
+     
+    
+}
+

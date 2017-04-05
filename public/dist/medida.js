@@ -2,7 +2,6 @@
 
 "use strict"
 
-
 var unidad_medida = XRegExp('^(\\s*) \n' +
                 '(?<valor> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) \n' +
                 '(\\s*)                                             \n' +
@@ -120,4 +119,4 @@ class Medida{
 }
 
 
-module.exports = Medida;
+//module.exports = Medida;
