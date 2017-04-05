@@ -1,4 +1,9 @@
-class Kelvin extends Temperatura{
+(function(exportar) { // triangle.js
+
+"use strict"
+
+ exportar.Kelvin =  class Kelvin extends exportar.Temperatura{
+
 
                  constructor(dato){
                      super(dato)
@@ -10,7 +15,7 @@ class Kelvin extends Temperatura{
                      result = (this.valor - 273);
                      result = result.toFixed(1) +"c";
 
-                     var n = new Celsius(result);
+                     var n = new exportar.Celsius(result);
 
                      return n;
                  }
@@ -21,8 +26,10 @@ class Kelvin extends Temperatura{
                      result = 1.8*(this.valor - 273)+ 32;
                      result = result.toFixed(1) + "f";
 
-                     var n = new Farenheit(result);
+                     var n = new exportar.Farenheit(result);
 
                      return n;
                  }
              }
+             
+}(window.exportar = window.exportar || {}));

@@ -1,6 +1,9 @@
 
-  "use strict"
-class Temperatura extends Medida{
+( function(exportar) { // triangle.js
+ "use strict"
+//var Medida = new Medida("15c");
+ 
+ exportar.Temperatura = class Temperatura extends  exportar.Medida{
 
         constructor(dato){
               super(dato)
@@ -16,8 +19,5 @@ class Temperatura extends Medida{
 
 }
 
-
-
-
-
+}(window.exportar = window.exportar || {}));
 
