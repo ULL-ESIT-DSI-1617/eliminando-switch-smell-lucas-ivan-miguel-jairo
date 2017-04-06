@@ -4,7 +4,7 @@
 * [Enlace a Gitbook](https://alu0100785265.gitbooks.io/tutorial-dsi/content/)
 ## Despliegues
 * [Heroku](https://dsi-p6.herokuapp.com/)
-* [Iaas](http://10.6.128.249:8086/)
+* [Iaas](http://10.6.128.175:8086/)
 ## Enlaces
 * [Enlace a instrucciones de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/practicas/practicaoop.html)
 * [Enlace a repositorio de la práctica](https://github.com/ULL-ESIT-DSI-1617/programacion-orientada-a-objetos-y-herencia-en-javascript-lucas-ivan-miguel-jairo)
