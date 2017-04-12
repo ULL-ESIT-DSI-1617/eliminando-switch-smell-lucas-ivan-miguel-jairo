@@ -133,3 +133,11 @@
     * [Creacion clase Celsius, Fahrenheit, Kelvin](capitulos/practica_poo_herencia_javascript/part4.md)
     * [Interaccion HTML con Objetos](capitulos/practica_poo_herencia_javascript/part5.md)
     
+---
+
+* [Práctica de Eliminación Codigo Smell y POO](capitulos/practica_eliminado_smell_oop/part1.md)
+    * [¿Qué es el Código Smell?](capitulos/practica_eliminado_smell_oop/part1.md)
+    * [Sustitución de Switch o If anidados por Array Asociativo (HASH)](capitulos/practica_eliminado_smell_oop/part2.md)
+    * [Utilización de la librería XRegExp](capitulos/practica_eliminado_smell_oop/part3.md)
+    * [Creación de Módulos con ECMA6](capitulos/practica_eliminado_smell_oop/part4.md)
+    

@@ -1,0 +1,2 @@
+## ¿Qué es el Código Smell?
+>En programación de computadores, la hediondez del código (code smell en inglés, o también conocido por código que huele o apesta) es cualquier síntoma en el código fuente de un programa que posiblemente indica un problema más profundo. Las hediondeces del código usualmente no son bug de programación (errores) -- no son técnicamente incorrectos y en realidad no impiden que el programa funcione correctamente. En cambio, indican deficiencias en el diseño que puede ralentizar el desarrollo o aumentan el riesgo de errores o fallos en el futuro.
