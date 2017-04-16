@@ -1,7 +1,7 @@
 # Eliminando Switch Smell
 
 * [Enlace a Gh-pages](https://ull-esit-dsi-1617.github.io/eliminando-switch-smell-lucas-ivan-miguel-jairo/)
-* [Enlace a Gitbook](https://alu0100785265.gitbooks.io/tutorial-dsi/content/)
+* [Enlace a Gitbook](https://alu0100785265.gitbooks.io/tutorial-dsi/content/capitulos/practica_poo_herencia_javascript/part1.html)
 ## Despliegues
 * [Heroku](https://codigo-smell.herokuapp.com/)
 * [Iaas](http://10.6.128.175:8086/)
