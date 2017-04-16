@@ -1,6 +1,6 @@
 # Eliminando Switch Smell
 
-* [Enlace a Gh-pages](https://ull-esit-dsi-1617.github.io/programacion-orientada-a-objetos-y-herencia-en-javascript-lucas-ivan-miguel-jairo/)
+* [Enlace a Gh-pages](https://ull-esit-dsi-1617.github.io/eliminando-switch-smell-lucas-ivan-miguel-jairo/)
 * [Enlace a Gitbook](https://alu0100785265.gitbooks.io/tutorial-dsi/content/)
 ## Despliegues
 * [Heroku](https://codigo-smell.herokuapp.com/)
