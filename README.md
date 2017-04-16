@@ -4,7 +4,7 @@
 * [Enlace a Gitbook](https://alu0100785265.gitbooks.io/tutorial-dsi/content/)
 ## Despliegues
 * [Heroku](https://codigo-smell.herokuapp.com/)
-<!--* [Iaas](http://10.6.128.175:8086/)-->
+* [Iaas](http://10.6.128.249:8086/)
 ## Enlaces
 * [Enlace a instrucciones de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/practicas/practicanoswitchsmell.html)
 * [Enlace a repositorio de la práctica](https://github.com/ULL-ESIT-DSI-1617/eliminando-switch-smell-lucas-ivan-miguel-jairo)
